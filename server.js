@@ -15,6 +15,10 @@ const server = http.createServer((request, response) => {
       res.write(' Welcome to contact us page'); 
       res.end(); 
   }
+  else if(url ==='/test') {
+    res.write('I am a sweet test'); 
+    res.end(); 
+}
   else {
       res.write('Hello World!'); 
       res.end(); 
