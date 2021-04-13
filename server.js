@@ -22,7 +22,7 @@ const server = http.createServer((req, res) => {
   else {
     res.write('Hello World!');
   }
-  res.end('Version: ' + process.env.NODE_VERSION + '\n');
+  res.end('\nVersion: ' + process.env.NODE_VERSION + '\n');
 })
 
 server.listen(port)
