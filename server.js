@@ -7,24 +7,22 @@ const server = http.createServer((request, res) => {
   /* res.write('Hello World\n');
   res.end('Version: ' + process.env.NODE_VERSION + '\n'); */
 
-  var url = req.url;
+  let url = req.url;
+  console.log(url);
       
   if(url ==='/about') {
-      res.write(' Welcome to about us page'); 
-      res.end(); 
+    res.write(' Welcome to about us page'); 
   }
   else if(url ==='/contact') {
-      res.write(' Welcome to contact us page'); 
-      res.end(); 
+    res.write(' Welcome to contact us page'); 
   }
   else if(url ==='/test') {
     res.write('I am a sweet test'); 
-    res.end(); 
-}
-  else {
-      res.write('Hello World!'); 
-      res.end(); 
   }
+  else {
+    res.write('Hello World!');
+  }
+  res.end('Version: ' + process.env.NODE_VERSION + '\n');
 })
 
 server.listen(port)
