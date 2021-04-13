@@ -2,7 +2,7 @@ const http = require('http')
 
 const port = 80
 
-const server = http.createServer((request, res) => {
+const server = http.createServer((req, res) => {
   res.writeHead(200, {'Content-Type': 'text/plain'});
   /* res.write('Hello World\n');
   res.end('Version: ' + process.env.NODE_VERSION + '\n'); */
